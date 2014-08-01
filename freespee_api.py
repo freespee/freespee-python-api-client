@@ -37,7 +37,7 @@ class Freespee:
     def put(self, resource, data):
         return self.make_request('put', resource, data)
 
-    def put(self, resource):
+    def delete(self, resource):
         return self.make_request('delete', resource)
 
 class ApiResponse:
