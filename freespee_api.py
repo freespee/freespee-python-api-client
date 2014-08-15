@@ -24,7 +24,7 @@ class Freespee:
         self.result = getattr(requests, method)(self.base_url + '/' + resource, **args)
 
         response = ApiResponse()
-        response.httpCode = self.result.status_code
+        response.http_code = self.result.status_code
         response.result = self.result.json()
         return response
 
@@ -41,7 +41,7 @@ class Freespee:
         return self.make_request('delete', resource)
 
 class ApiResponse:
-    httpCode = None
+    http_code = None
     result = None
 
     def __init__(self):
